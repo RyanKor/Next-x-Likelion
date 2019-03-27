@@ -1,0 +1,22 @@
+.container {
+    width: 480px;
+    height: 800px;
+    border: 1px solid lightgray;
+    margin: 50px auto;
+}
+
+
+
+/* 
+.slideitem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 480px;
+    height: 300px;
+    border: 2px solid white;
+    background-color: pink;
+    color: white;
+    font-size: 20px;
+} */
