@@ -1,0 +1,225 @@
+/* 맨 위 흰색 바탕 설정 */
+.white{
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid grey;
+    height: 77px;
+    margin-top: 30px;
+}
+/* 맨위 흰색 바탕 설정 - 왼쪽 상단 아이콘 */
+.left{
+    display: flex;
+    width: 120px;
+    justify-content: space-between;
+    align-content: center;
+
+}
+.icon1{
+    width: 40px;
+    height: 40px;
+
+}
+.icon2{
+    width: 70px;
+    height: 50px;
+
+}
+.slash{
+    width: 50px;
+    height: 30px;
+    padding-top: 5px;
+}
+/* 맨위 흰색 바탕 설정 - 가운데 검색 바 만들기 */
+.search{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width : 200px;
+    height: 25px;
+    border: 0.5px solid grey;
+    background-color: rgb(236, 232, 232);
+    border-radius: 7%;
+    color: grey;
+    margin-top: 10px;
+}
+/* 맨위 흰색 바탕 설정 - 오른쪽 메뉴 설정 만들기 */
+.right{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    width: 140px;
+    padding-top: 5px;
+}
+.compass{
+    width: 30px;
+    height: 30px;
+}
+.like{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
+.user{
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+/* 흰색 상단바 작성 완료~~! */
+
+
+
+
+/* 가운데 회색 프로필 사진 세팅하기  */
+.profile-box{
+    display: flex;
+    height: 250px;
+    margin-left: 250px;
+    align-content: center;
+    margin-top: 80px;
+}
+.hole-setting{
+    display: flex;
+    margin-left: 70px;
+    flex-direction: column;
+    margin-top: 30px;
+}
+.setting1{
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+    font-size: 20px;
+}
+.setting2{
+    margin-top: 20px;
+    display: flex;
+    font-size: 20px;
+    justify-content: space-between;
+    width: 400px;
+}
+.nickname{
+    font-size: 25px;
+}
+.edit-profile{
+    display: flex;
+    justify-content: center;
+    padding-top: 6px;
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+    border: 0.5px solid grey;
+    border-radius: 8%;
+}
+.profile-img{
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+}
+.set{
+    width: 30px;
+    height: 30px;
+}
+.username{
+    margin-top: 20px;
+    font-size: 20px;
+    
+}
+/* 하이라이트 표시 창 */
+.highlight{
+    display: flex;
+    margin-left: 250px;
+}
+.high1{
+    display: flex;
+    flex-direction: column;
+    /* height: 150px;  */
+    justify-content: center;
+    align-content: center;
+}
+.high2{
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    /* height: 150px; */
+    justify-content: center;
+    align-content: center;
+}
+.HI1{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    border-color: 1px solid grey;
+}
+.flag1{
+    width: 15px;
+    height: 15px;
+    margin-top: 10px;
+    margin-left: 40px;
+}
+
+
+
+
+/* 게시물 등 표기해주는 Bar */
+.stat-bar{
+    display:flex;
+    width: 1000px;
+    margin-left: 190px;
+    border-top: 1px solid #ccc;
+    margin-top: 40px;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.bar-image{
+    width: 30px;
+    height: 30px;
+}
+.stat-post{
+    display: flex;
+    flex-direction: column;
+    border-top: 2px solid black;
+}
+.post-manage{
+    display: flex;
+    margin-top: 20px;
+}
+.stat-IGTV{
+    display: flex;
+    margin-top: 20px;
+}
+.stat-saved{
+    display: flex;
+    margin-top: 20px;
+}
+.stat-tagged{
+    display: flex;
+    margin-top: 20px;
+}
+.post-letters{
+    margin-left: 10px;
+}
+.IGTV-letters{
+    margin-left: 10px;
+}
+.saved-letters{
+    margin-left: 10px;
+}
+.tagged-letters{
+    margin-left: 10px;
+}
+
+
+
+/* 게시물 이미지 보여주는 창 */
+.user-post{
+    display: flex;
+    width: 1000px;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-left: 190px;
+}
+.user-img{
+    width: 300px;
+    height: 300px;
+}
