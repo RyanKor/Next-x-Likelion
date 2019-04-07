@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>여기서 글자 수를 세세요</h1>
+    <form action="{% url 'result' %}" method="get"> 
+        <!-- action은 여기서 url result로 이동해달라는 행위를 지시하기 위해  -->
+        <textarea name="fulltext" cols="60" rows="10"></textarea>
+        <input type="submit" value="count">
+    </form>
+</body>
+</html>

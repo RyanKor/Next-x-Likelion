@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    {% comment %} <style type="text/css">
+        h1{color: rebeccapurple;}
+        h3{color: rebeccapurple;}
+    </style> {% endcomment %}
+</head>
+<body>
+    <h1> 당신이 입력한 텍스트는 총 "{{textcount}}" 단어 입니다 </h1>
+    
+    <h3>입력받은 텍스트</h3>
+    <h2>{{text}}</h2>
+    <h3>단어 카운트</h3>
+    {% for key, value in dic.items %}
+        <div>
+            <h4>{{key}}:{{value}}</h4>
+        <br>   
+        </div>
+    {% endfor %}
+    <a href = "{% url 'home' %}" style="color:rebeccapurple"> 다시하기 </a>
+</body>
+</html>
