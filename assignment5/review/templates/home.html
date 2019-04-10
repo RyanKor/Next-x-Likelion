@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Main Page</title>
+</head>
+<body>
+    <h1>승태의 서재</h1>
+    <h2>게시글 목록</h2>
+    {% for post in posts %}
+    <li><a href="{% url 'postDetail' post.pk %}"> {{post.title}} </a></li><br>
+    {% endfor %}
+    <a href="{% url 'create' %}"> 게시글 생성하기 </a>
+</body>
+</html>

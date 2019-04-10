@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Post Details</title>
+</head>
+<body>
+    <h2>리뷰 제목 : {{post.title}}</h2>
+    <h5> 내용 : {{post.contents}} </h5>
+    <h5>게시글 생성시간 : {{post.timeSet}} </h5>
+    <h5> 가격 : {{post.price}} </h5>
+    <h5> 책 평점 : {{post.score}} </h5>
+    <a href=" {% url 'home' %} "> 메인페이지로 돌아가기 </a>
+</body>
+</html>
