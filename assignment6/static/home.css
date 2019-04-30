@@ -1,0 +1,25 @@
+.pagename{
+    display: flex;
+    background-image: url('https://wallpaperplay.com/walls/full/1/d/2/73083.jpg');
+    background-size: cover; 
+    justify-content: center;
+    align-content: center;
+    color: white;
+    border-bottom: 1px solid black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.container{
+    background-image: url('http://www.utm.my/insteg/files/2018/01/4k-space-background.jpg');
+}
+.lst{
+    color: white;
+}
+
+.pr-5{
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    background-color: aliceblue;
+}
