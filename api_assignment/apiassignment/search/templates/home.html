@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>대한민국 곤충 정보</h1>
+    {% for data in dataShown %}
+        <h3>해당 곤충의 학명은 {{data.insctSpecsScnm}}이며,</h3>
+        <h3>국문 명칭은 {{data.insctGnrlNm}}이라 합니다.</h3>
+    {% endfor %}
+</body>
+</html>
