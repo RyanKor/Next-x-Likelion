@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+        <h1 id="change" style="text-align:center; justify-content: center; font-size: 180px;">삐까번쩍하네~</h1>
+    
+    <script>
+        //Change colors randomly with getRandomNumber Function.
+
+        function getRandomNumber() {
+        // 0 ~ 99까지 숫자중 랜덤!
+        let randomNumber = Math.floor(Math.random() * 255)
+        // Math.random() : 0 ~ 1 사이 랜덤 소수
+        return randomNumber
+        }
+        // var r = Math.floor(Math.random() * 255)
+        // var g = Math.floor(Math.random() * 255)
+        // var b = Math.floor(Math.random() * 255)
+        //Then, Designate font and background with querySelector.
+
+        let change = document.querySelector('#change')
+        let body = document.querySelector('body')
+        setInterval(function(){
+            change.style.color = 'rgb(' + getRandomNumber() + ',' + getRandomNumber() + ',' + getRandomNumber() + ')'
+            body.style.backgroundColor = 'rgb(' + getRandomNumber() + ',' + getRandomNumber() + ',' + getRandomNumber() + ')'
+        }, 100)
+    </script>
+
+</body>
+</html>

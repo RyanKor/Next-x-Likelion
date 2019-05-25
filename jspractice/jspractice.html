@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1>연습해보리기</h1>
+    <h1>이거슨 새로운 연습이다</h1> -->
+    <h1 id = "title1"> 이거슨 제목입니다만?</h1>
+    <h1 class="title2"> 이것도 제목입니다만?</h1>
+    <h2>제목 왜이리 많슴?</h2>
+    <script>
+        // let h1 = document.querySelector('h1')
+        // h1.style.color = 'green'
+        // console.log(h1)
+
+        //querySelectorAll
+        // let h1s = document.querySelectorAll('h1')
+        // console.log(h1s)
+        // h1s[0].style.color = 'green'
+        // h1s[1].style.color = 'blue'
+        // let body = document.querySelector('body')
+        // setInterval(function(){
+        //     body.style.backgroundColor = (body.style.backgroundColor === 'red') ? 'blue' : 'red '}, 1000) 
+        // let title1 = document.querySelector('#title1')
+        
+        //ID로 잡을때는 getElement로 잡는다. ID는 무조건 한 번만 써야된다? ID는 하나의 HTML에 유일해야됌 
+        let title1 = document.getElementById('title1')
+        title1.style.color = 'green'
+
+
+
+        // let title2 = document.querySelector('.title2')
+        // title2.style.color = 'blue'
+
+        //class, tag name으로 잡을때는 getElements(복수형)로 잡는다.
+        let title2 = document.getElementsByClassName('title2')
+        title2[0].style.color = 'blue'
+
+        // let h2 = document.querySelector('h2')
+        let h2 = document.getElementsByTagName('h2')
+        h2[0].style.color = 'red'
+    </script>
+</body>
+</html>
