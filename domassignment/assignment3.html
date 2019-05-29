@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>과제3</title>
+    <style>
+      body {
+        padding: 30px;
+      }
+      div {
+        padding: 20px;
+        border: 1px solid #999999;
+        background-color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <div>
+        <div>
+          <div>
+            <div>
+              <div>
+                <div>
+                  <div>
+                    <div>
+                      <div>
+                        <div>
+                          <div>
+                            <div>
+                              <div>
+                                <div>
+                                  <div>
+                                    <div>
+                                      <div>
+                                        <div>
+                                          <div></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    // 각각의 div를 클릭하면, 클릭한 div와 바로 상위 div의 색깔이 각각, 파랑 / 빨강으로 바뀌게 해주세요
+    let divisions = document.querySelectorAll("div");
+    // 모든 div값에 대한 쿼리값 선택
+    divisions.forEach(function(div) {
+      // 각각의 div 값에 대해서 
+      div.addEventListener("click", function(){
+        // 각 테두리 부분을 click했을 때 이벤트가 발생한다. this.style.backgroundColor = "blue"는 클릭한 div값의 경계
+        this.style.backgroundColor = "blue"
+        // parentElement는 클릭한 div값의 바로 상위 div값이다.
+        this.parentElement.style.backgroundColor = "red"
+        event.stopPropagation()
+        // 다만, 구글로 가기 과제처럼 여러개 값이 동시에 출력되면 안되겠지?
+      })
+    })
+  </script>
+</html>
