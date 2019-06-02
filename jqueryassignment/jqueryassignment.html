@@ -1,0 +1,82 @@
+<!-- 음 솔직히 말하면, Jquery과제 1은 수업 내용을 전혀 모르는 상태에서 작성하는터라..불가피하게 이미 과제를 완료한 친구들의 코드를 보면서 이해하려고 노력하며 작성했습니다. 양해 바랍니다. -->
+<head>
+        <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+          crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
+        <link rel="stylesheet" href="jqueryassignment.css" />
+      </head>
+      
+      <body>
+        <div class="container">
+          <div class="title">
+            오늘의 할 일
+            <span>
+              <i id="plus" class="fas fa-plus"></i>
+              <i id="delete_all" class="far fa-trash-alt icon"></i>
+            </span>
+          </div>
+          <input type="text" id="input" />
+      
+          <div class="list">
+            <div>
+              - 멋쟁이사자처럼 교안 짜기
+              <span>
+                <i class="far fa-trash-alt icon"></i>
+              </span>
+            </div>
+            <div>
+              - 기억심리학 과제하기
+              <span>
+                <i class="far fa-trash-alt icon"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      
+        <script>
+          // + 버튼 클릭 시, input fade 토글
+          $("body").on("click", "#plus", function () {
+            $("#input").fadeToggle();
+          });
+          // trash icon 클릭 시, 500ms 간 fadeOut 후 사라짐
+          $("body").on("click", ".list div span .fa-trash-alt", function (e) {
+            e.stopPropagation();
+            $(this).parent().parent().fadeOut();
+          });
+          // 작성된 리스트 누르면 .complete라는 클래스 토글
+          $("body").on("click", ".list div", function () {
+            $(this).each(function () {
+              $(this).toggleClass("complete");
+            })
+          })
+        // 여기는 실습해봤다가 고친 코드인듯 하다.
+          /*
+          $(".list div").each(function (idx) {
+            $(this).on("click", function () {
+              $(this).toggleClass("complete");
+            })
+          })
+          */
+
+          // 입력 후 엔터 입력 시, 새로운 리스트 생성
+          $("#input").keypress(function (e) {
+            if (e.keyCode == 13) {
+              let txt1 = "<div>- ";
+              txt1 += this.value;
+              txt1 += '<span><i class="far fa-trash-alt icon"></i></span></div>';
+              $(".list").append(txt1);
+            }
+          })
+          // 상단의 trash 버튼 클릭 시, 완료된 리스트 모두 삭제
+        //   여기도 실습해보다가 변경된 코드 부분
+          /*
+          $("#delete_all").click(function () {
+            $(".complete").fadeOut();
+          })
+          */
+          $("body").on("click", "#delete_all", function () {
+            $(".complete").fadeOut();
+          })
+        </script>
+      </body>

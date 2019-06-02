@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script
+  src="http://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+    <button type="submit" id="img">멍!</button>
+    <script>
+ $('body').on("click", "button", function() {
+	$('button').remove();
+	$('body').append("<img id=\"loading\" src=\"./loading.gif\">");
+	// 아무래도 이 부분을 받아오는건("POST"를 사용하니까?) API 연결해올 때랑 같은 방식인가보다.
+    $.ajax({
+   	type: "POST",
+	dataType: "json",
+	url : "https://dog.ceo/api/breeds/image/random",
+    // ajax로 연결하는 url와 통신이 성공했을 때 어떤 결과값이 나와야 되는가?
+ 	success: function(response) {
+		$('img').remove();
+		$('body').append('<button>멍!</button>');
+		$('body').append(`<img src="${response.message}" width="300px" height="200px">`);
+	}
+	});
+	
+});
+    </script>
+</body>
+</html>
